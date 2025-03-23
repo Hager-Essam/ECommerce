@@ -1,0 +1,62 @@
+.container-fluid {
+  padding: 20px;
+  height: 100vh;
+}
+
+.main-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+  url('../../../../public/shoping.webp') center/cover no-repeat;
+  color: white;
+  padding: 50px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.elect {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+  url('../../../../public/electronics.jpg') center/cover no-repeat;
+}
+
+.clothes {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+  url('../../../../public/clothes.jpg') center/cover no-repeat;
+}
+
+.category-card {
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 270px;
+  font-weight: bold;
+}
+
+.btn-custom {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+
+.btn-custom:hover {
+  background: white;
+  color: black;
+}
+
+.furn {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+  url('../../../../public/furn.jpg') center/cover no-repeat;
+  //margin-right: 5px;
+}
+
+.Acc {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+  url('../../../../public/accessories.png') center/cover no-repeat;
+}
+
+
