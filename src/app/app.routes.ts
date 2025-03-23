@@ -7,6 +7,7 @@ import {FurnitureComponent} from './features/furniture/furniture.component';
 import {AccessoriesComponent} from './features/accessories/accessories.component';
 
 export const routes: Routes = [
+  {path:'',component: HomeComponent},
   {path:'home',component:HomeComponent},
   {path:'electronics',component:ElectronicsComponent},
   {path:'clothes',component:ClothesComponent},
