@@ -13,14 +13,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
+  border-radius: 10px;
 }
 
 .elect {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
   url('../../../../public/electronics.jpg') center/cover no-repeat;
+  border-radius: 10px;
 }
 
 .clothes {
+  border-radius: 10px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
   url('../../../../public/clothes.jpg') center/cover no-repeat;
 }
@@ -52,11 +55,13 @@
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
   url('../../../../public/furn.jpg') center/cover no-repeat;
   //margin-right: 5px;
+  border-radius: 10px;
 }
 
 .Acc {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
   url('../../../../public/accessories.png') center/cover no-repeat;
+  border-radius: 10px;
 }
 
 
