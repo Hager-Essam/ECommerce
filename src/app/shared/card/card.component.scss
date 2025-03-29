@@ -1,0 +1,27 @@
+
+img {
+  width: 50%;
+  min-height: 60%;
+  max-height: 70%;
+  align-self: center;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.card {
+  width: 20rem;
+  height: 25rem;
+  border-radius: 13px;
+  background: #e0e0e0;
+  box-shadow: -5px 5px 25px #949494,
+  5px -5px 25px #ffffff;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+h4 {
+  margin-bottom: 1rem;
+}
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: -10px 10px 30px #888888, 10px -10px 30px #ffffff;
+  cursor: pointer;
+}

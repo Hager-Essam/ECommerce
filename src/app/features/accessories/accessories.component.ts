@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AccessoriesService} from '../../core/services/accessories.service';
 import {CurrencyPipe, NgForOf, NgIf, PercentPipe} from '@angular/common';
 import {LoaderComponent} from '../../shared/loader/loader.component';
+import {CardComponent} from '../../shared/card/card.component';
 
 @Component({
   selector: 'app-accessories',
@@ -11,7 +12,8 @@ import {LoaderComponent} from '../../shared/loader/loader.component';
     NgIf,
     PercentPipe,
     CurrencyPipe,
-    LoaderComponent
+    LoaderComponent,
+    CardComponent
   ],
   templateUrl: './accessories.component.html',
   styleUrl: './accessories.component.scss'

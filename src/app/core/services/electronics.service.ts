@@ -6,7 +6,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class ElectronicsService {
-  private apiUrl = 'https://fakestoreapi.com/products/category/electronics';
+  private apiUrl = 'https://api.escuelajs.co/api/v1/products/?categorySlug=electronics';
 
   constructor(private http: HttpClient) {
   }

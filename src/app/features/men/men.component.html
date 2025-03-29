@@ -3,7 +3,7 @@
   <div *ngIf = "clothes.length === 0" class="loading">
     <app-loader/>
   </div>
-  <div *ngFor="let item of clothes" class="card">
+  <div *ngFor="let item of menClothes" class="card">
     <div class="card" >
       <img class="card-img-top"  [src] = "item.image" alt="{{item.title}}">
       <div class="card-body">

@@ -1,3 +1,7 @@
-
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
 /*# sourceMappingURL=clothes.component.css.map */

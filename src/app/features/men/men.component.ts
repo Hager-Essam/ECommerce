@@ -15,14 +15,27 @@ import {LoaderComponent} from '../../shared/loader/loader.component';
   templateUrl: './men.component.html',
   styleUrl: './men.component.scss'
 })
-export class MenComponent implements OnInit{
+export class MenComponent implements OnInit {
   clothes: any[] = [];
+  menClothes: any[] = [];
 
-  constructor(private clothesService: ClothesService) {}
+  constructor(private clothesService: ClothesService) {
+  }
 
   ngOnInit() {
-    this.clothesService.getProductsByCategory("men's clothing").subscribe((data) => {
+    this.clothesService.getAllProducts().subscribe((data) => {
       this.clothes = data;
     });
   }
+  //
+  // categorizeProducts() {
+  //   this.clothes.forEach(product => {
+  //     const lowerTitle = product.title.toLowerCase();
+  //     const lowerDesc = product.description.toLowerCase();
+  //
+  //     if (lowerTitle.includes('men') || lowerDesc.includes('men')) {
+  //       this.menClothes.push(product);
+  //     }
+  //   });
+  // }
 }

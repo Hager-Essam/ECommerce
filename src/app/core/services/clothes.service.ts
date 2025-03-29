@@ -6,16 +6,18 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class ClothesService {
+  private apiUrl = 'https://api.escuelajs.co/api/v1/products/?categorySlug=clothes';
   private baseUrl = 'https://fakestoreapi.com/products';
 
   constructor(private http: HttpClient) {}
 
-  getCategories(): Observable<string[]> {
-    return this.http.get<string[]>(`${this.baseUrl}/categories`);
-  }
 
   getProductsByCategory(category: string): Observable<any[]> {
     return this.http.get<any[]>(`${this.baseUrl}/category/${category}`);
   }
 
+
+  getAllProducts(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}`);
+  }
 }

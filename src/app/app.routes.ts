@@ -8,6 +8,7 @@ import {AccessoriesComponent} from './features/accessories/accessories.component
 import {MenComponent} from './features/men/men.component';
 import {WomenComponent} from './features/women/women.component';
 import {KidsComponent} from './features/kids/kids.component';
+import {ShoesComponent} from './features/shoes/shoes.component';
 
 export const routes: Routes = [
   {path:'',component: HomeComponent},
@@ -19,4 +20,5 @@ export const routes: Routes = [
   {path:'men',component:MenComponent},
   {path:'women',component:WomenComponent},
   {path:'kids',component:KidsComponent},
+  {path:'shoes',component:ShoesComponent},
 ];

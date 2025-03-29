@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ElectronicsService} from '../../core/services/electronics.service';
 import {CurrencyPipe, NgForOf, NgIf} from '@angular/common';
 import {LoaderComponent} from '../../shared/loader/loader.component';
+import {CardComponent} from '../../shared/card/card.component';
 
 @Component({
   selector: 'app-electronics',
@@ -10,7 +11,8 @@ import {LoaderComponent} from '../../shared/loader/loader.component';
     CurrencyPipe,
     LoaderComponent,
     NgForOf,
-    NgIf
+    NgIf,
+    CardComponent
   ],
   templateUrl: './electronics.component.html',
   styleUrl: './electronics.component.scss'

@@ -1,20 +1,6 @@
 <div class="container">
-
-  <div *ngIf = "accessories.length === 0" class="loading">
-    <app-loader/>
+  <div *ngIf="accessories.length === 0" class="loading">
+    <app-loader></app-loader>
   </div>
-  <div *ngFor="let item of accessories" class="card">
-    <div class="card" >
-      <img class="card-img-top"  [src] = "item.image" alt="{{item.title}}">
-      <div class="card-body">
-      <h4>{{item.price|currency}}</h4>
-        <h6>{{item.title}}</h6>
-<!--        <p>{{item.description}}</p>-->
-      </div>
-    </div>
-
-  </div>
-
+  <app-card *ngFor="let item of accessories" [product]="item"></app-card>
 </div>
-
-

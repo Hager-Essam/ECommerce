@@ -1,6 +1,6 @@
 .wrapper {
   width: 200px;
-  height: 60px;
+  height: 100vh;
   position: relative;
   z-index: 1;
 }
@@ -8,6 +8,7 @@
 .circle {
   width: 20px;
   height: 20px;
+  margin: auto;
   position: absolute;
   border-radius: 50%;
   background-color: #fff;

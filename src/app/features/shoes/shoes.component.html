@@ -1,0 +1,6 @@
+<div class="container">
+  <div *ngIf="shoes.length === 0" class="loading">
+    <app-loader></app-loader>
+  </div>
+  <app-card *ngFor="let item of shoes" [product]="item"></app-card>
+</div>
