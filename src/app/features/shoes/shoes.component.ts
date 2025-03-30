@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {LoaderComponent} from '../../shared/loader/loader.component';
 import {CurrencyPipe, NgForOf, NgIf} from '@angular/common';
-import {ClothesService} from '../../core/services/clothes.service';
-import {ShoesService} from '../../core/services/shoes.service';
 import {CardComponent} from '../../shared/card/card.component';
+import {ProductService} from '../../core/services/product.service';
 
 @Component({
   selector: 'app-shoes',
@@ -21,11 +20,11 @@ import {CardComponent} from '../../shared/card/card.component';
 export class ShoesComponent implements OnInit {
   shoes: any[] = [];
 
-  constructor(private shoesService: ShoesService) {
+  constructor(private productService: ProductService) {
   }
 
   ngOnInit() {
-    this.shoesService.getAllProducts().subscribe((data) => {
+    this.productService.getProductsByCategory('shoes').subscribe((data) => {
       this.shoes = data;
     });
   }

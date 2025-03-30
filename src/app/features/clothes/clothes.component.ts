@@ -1,10 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {AccessoriesService} from '../../core/services/accessories.service';
-import {ClothesService} from '../../core/services/clothes.service';
 import {CurrencyPipe, NgForOf, NgIf} from '@angular/common';
 import {LoaderComponent} from '../../shared/loader/loader.component';
-import {data} from 'autoprefixer';
 import {CardComponent} from "../../shared/card/card.component";
+import {ProductService} from '../../core/services/product.service';
 
 @Component({
   selector: 'app-clothes',
@@ -22,10 +20,10 @@ import {CardComponent} from "../../shared/card/card.component";
 export class ClothesComponent implements OnInit{
 
   clothes: any[] = [];
-  constructor(private clothesService: ClothesService) {}
+  constructor(private productService: ProductService) {}
 
   ngOnInit() {
-    this.clothesService.getAllProducts().subscribe((data) => {
+    this.productService.getProductsByCategory('clothes').subscribe((data) => {
 
     this.clothes = data;
     });

@@ -1,10 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {log} from 'node:util';
-import {FurnitureService} from '../../core/services/furniture.service';
 import {CurrencyPipe, NgForOf, NgIf} from '@angular/common';
 import {LoaderComponent} from '../../shared/loader/loader.component';
-import {ElectronicsService} from '../../core/services/electronics.service';
 import {CardComponent} from '../../shared/card/card.component';
+import {ProductService} from '../../core/services/product.service';
 
 @Component({
   selector: 'app-furniture',
@@ -19,14 +17,14 @@ import {CardComponent} from '../../shared/card/card.component';
   templateUrl: './furniture.component.html',
   styleUrl: './furniture.component.scss'
 })
-export class FurnitureComponent{
+export class FurnitureComponent implements OnInit{
   furniture: any[] = [];
 
-  constructor(private furnitureService: FurnitureService,) {
+  constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
-    this.furnitureService.getFurniture().subscribe(
+      this.productService.getProductsByCategory(`furniture`).subscribe(
       (data)=>{
         this.furniture = data;
       },

@@ -1,15 +1,16 @@
 
-<div class="container">
+<a [routerLink]="['/product', product.id]">
 
-  <div class="card">
-    <img class="card-img-top" [src]="product.image || product.images?.[0]" alt="{{ product.title }}">
-    <div class="card-body">
-      <h4>{{ product.price | currency }}</h4>
-      <h6>{{ product.title }}</h6>
-      <!--    <p *ngIf="product.description">{{ product.description }}</p>-->
+  <div class="container">
+    <div class="card"  (click)="goToProductPage()">
+      <img class="card-img-top" [src]="product.image || product.images?.[0]" alt="{{ product.title }}">
+      <div class="card-body">
+        <h4>{{ product.price | currency }}</h4>
+        <h6>{{ product.title }}</h6>
+      </div>
     </div>
   </div>
-</div>
 
 
+</a>
 

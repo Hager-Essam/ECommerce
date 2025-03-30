@@ -1,6 +1,8 @@
-<div class="container">
-  <div *ngIf="electronics.length === 0" class="loading">
-    <app-loader></app-loader>
+
+  <div class="container" >
+    <div *ngIf="electronics.length === 0" class="loading">
+      <app-loader></app-loader>
+    </div>
+    <app-card *ngFor="let item of electronics" [product]="item"></app-card>
   </div>
-  <app-card *ngFor="let item of electronics" [product]="item"></app-card>
-</div>
+

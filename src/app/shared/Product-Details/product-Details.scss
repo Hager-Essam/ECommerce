@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  gap: 2rem;
+  height: 100vh;
+  padding-top: 5rem;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 30rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+h5 {
+  line-height: 1.6;;
+}
+
+.container div:first-child {
+  width: 100%;
+}
+.str{
+  color:red;
+}

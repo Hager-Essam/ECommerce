@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {ElectronicsService} from '../../core/services/electronics.service';
 import {CurrencyPipe, NgForOf, NgIf} from '@angular/common';
 import {LoaderComponent} from '../../shared/loader/loader.component';
 import {CardComponent} from '../../shared/card/card.component';
+import {RouterLink} from '@angular/router';
+import {ProductService} from '../../core/services/product.service';
 
 @Component({
   selector: 'app-electronics',
@@ -12,7 +13,8 @@ import {CardComponent} from '../../shared/card/card.component';
     LoaderComponent,
     NgForOf,
     NgIf,
-    CardComponent
+    CardComponent,
+    RouterLink
   ],
   templateUrl: './electronics.component.html',
   styleUrl: './electronics.component.scss'
@@ -20,16 +22,16 @@ import {CardComponent} from '../../shared/card/card.component';
 export class ElectronicsComponent implements OnInit {
   electronics: any[] = [];
 
-  constructor(private electronicsService: ElectronicsService) {
+  constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
-    this.electronicsService.getElectronics().subscribe(
-      (data)=>{
+    this.productService.getProductsByCategory('electronics').subscribe(
+      (data) => {
         this.electronics = data;
       },
-      (error)=>{
-        console.log('Error while fetching Electronics',error);
+      (error) => {
+        console.log('Error while fetching Electronics', error);
       }
     );
   }
