@@ -3,6 +3,8 @@
     <div *ngIf="electronics.length === 0" class="loading">
       <app-loader></app-loader>
     </div>
-    <app-card *ngFor="let item of electronics" [product]="item"></app-card>
+    <app-card *ngFor="let item of electronics ; let i = index"
+              [product]="item"
+    [index]="i" ></app-card>
   </div>
 

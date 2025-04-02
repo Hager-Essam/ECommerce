@@ -1,0 +1,8 @@
+<div class="container">
+  <div *ngIf="Products.length === 0" class="loading">
+    <app-loader></app-loader>
+  </div>
+  <app-card *ngFor="let item of Products;let i =index"
+            [product]="item"
+            [index]="i"></app-card>
+</div>

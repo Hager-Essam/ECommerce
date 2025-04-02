@@ -1,0 +1,29 @@
+h2{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.container{
+  height: 100vh;
+}
+.cart-item img {
+  border-radius: 8px;
+}
+
+.cart-item {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item:hover {
+  background-color: gray;
+  transform: scale(1.02);
+  transition: 0.3s ease-in-out;
+  color: white;
+}
+
+.btn {
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #dc3545;
+}

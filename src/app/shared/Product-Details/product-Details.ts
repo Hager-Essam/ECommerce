@@ -4,6 +4,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {ProductService} from '../../core/services/product.service';
 import {CurrencyPipe, NgIf} from '@angular/common';
+import {CartService} from '../../core/services/cart.service';
 
 @Component({
   selector: 'app-Product-Details',
@@ -21,7 +22,9 @@ export class ProductDetails implements OnInit {
   product: any;
 
 
-  constructor(private route: ActivatedRoute, private productService: ProductService) {
+  constructor(private route: ActivatedRoute,
+              private productService: ProductService
+  ,private cartService: CartService) {
   }
 
 
@@ -38,6 +41,12 @@ export class ProductDetails implements OnInit {
           console.error('Error fetching product:', error);
         }
       );
+    }
+  }
+  addToCart(): void {
+    if (this.product) {
+      this.cartService.addToCart(this.product);
+      alert(`${this.product.title} added to cart!`);
     }
   }
 }

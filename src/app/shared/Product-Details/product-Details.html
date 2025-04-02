@@ -11,8 +11,8 @@
       <h5>{{ product.description }}</h5>
       <h3><strong class="str">Price:</strong> {{ product.price | currency }}</h3>
       <h3><strong class="str">Category:</strong> {{ product.category.name }}</h3>
+    <button class="btn btn-submit" (click)="addToCart()">Add to Cart</button>
     </div>
-
   </div>
 
   <div *ngIf="!product">

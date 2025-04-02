@@ -3,4 +3,14 @@
   margin: 0;
 }
 
+.active {
+  font-weight: 500;
+  color: gray;
+  border-bottom: solid 1px gray;
+}
+
+.dropdown-menu {
+  background-color: #cecfd0;
+}
+
 /*# sourceMappingURL=nav-bar.component.css.map */

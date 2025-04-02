@@ -1,67 +1,107 @@
 .container-fluid {
   padding: 20px;
   height: 100vh;
-}
-
-.main-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
   url('../../../../public/shoping.webp') center/cover no-repeat;
-  color: white;
-  padding: 50px;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  border-radius: 10px;
-}
-
-.elect {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-  url('../../../../public/electronics.jpg') center/cover no-repeat;
-  border-radius: 10px;
-}
-
-.clothes {
-  border-radius: 10px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-  url('../../../../public/clothes.jpg') center/cover no-repeat;
-}
-
-.category-card {
-  color: white;
-  text-align: center;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  min-height: 270px;
+}
+
+h1 span {
+  animation: dance 3s infinite;
+}
+
+.dancing-text {
+  display: block;
+  font-size: 6rem;
+  margin-top: 5rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 10px;
+  margin-bottom: 3rem;
+
+}
+
+button {
+  width: 10em;
+  border-radius: 10px;
+  padding: .5rem;
+  background-color: transparent;
+  border: 2px solid white;
+  font-weight: bold;
+  margin-top: 3rem;
+  color: white;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
   font-weight: bold;
 }
-
-.btn-custom {
-  border: 2px solid white;
-  background: transparent;
+h2 {
   color: white;
-  padding: 5px 15px;
-  text-decoration: none;
+  text-align: center;
+  font-size: 4rem;
 }
 
-.btn-custom:hover {
-  background: white;
-  color: black;
+h1 {
+  text-align: center;
 }
 
-.furn {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-  url('../../../../public/furn.jpg') center/cover no-repeat;
-  //margin-right: 5px;
-  border-radius: 10px;
+.dancing-text span {
+  display: inline-block;
+  animation: dance 2s infinite;
+  text-shadow: red 1px 3px;
+  text-align: center;
 }
 
-.Acc {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-  url('../../../../public/accessories.png') center/cover no-repeat;
-  border-radius: 10px;
+@keyframes dance {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
+.dancing-text span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dancing-text span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.dancing-text span:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.dancing-text span:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+.dancing-text span:nth-child(6) {
+  animation-delay: 0.4s;
+}
+
+.dancing-text span:nth-child(8) {
+  animation-delay: 0.5s;
+}
+
+.dancing-text span:nth-child(9) {
+  animation-delay: 0.6s;
+}
+
+.dancing-text span:nth-child(10) {
+  animation-delay: 0.7s;
+}
+
+.dancing-text span:nth-child(11) {
+  animation-delay: 0.8s;
+}
+
+.dancing-text span:nth-child(12) {
+  animation-delay: 0.9s;
+}
 

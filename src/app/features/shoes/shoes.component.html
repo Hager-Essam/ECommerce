@@ -2,5 +2,7 @@
   <div *ngIf="shoes.length === 0" class="loading">
     <app-loader></app-loader>
   </div>
-  <app-card *ngFor="let item of shoes" [product]="item"></app-card>
+  <app-card *ngFor="let item of shoes;let i = index"
+            [product]="item"
+  [index]="i"></app-card>
 </div>

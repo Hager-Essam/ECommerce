@@ -14,14 +14,30 @@ img {
   background: #e0e0e0;
   box-shadow: -5px 5px 25px #949494, 5px -5px 25px #ffffff;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  animation: move 3s infinite;
 }
 
 h4 {
   margin-bottom: 1rem;
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.card {
+  animation: float 3s infinite ease-in;
+}
+
 .card:hover {
-  transform: translateY(-10px) scale(1.05);
+  transform: translateY(-20px) scale(1.05);
   box-shadow: -10px 10px 30px #888888, 10px -10px 30px #ffffff;
   cursor: pointer;
 }
