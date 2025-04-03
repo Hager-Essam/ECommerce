@@ -10,7 +10,15 @@
 }
 
 .dropdown-menu {
-  background-color: #cecfd0;
+  background-color: #f7f9fa;
+}
+
+.navbar-brand {
+  font-weight: bolder;
+  font-style: italic;
+  text-shadow: 1px 1px red;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
 }
 
 /*# sourceMappingURL=nav-bar.component.css.map */

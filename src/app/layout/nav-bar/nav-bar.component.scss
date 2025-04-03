@@ -1,12 +1,22 @@
-.navbar{
-  padding:0;
-  margin:0;
+.navbar {
+  padding: 0;
+  margin: 0;
 }
-.active{
+
+.active {
   font-weight: 500;
   color: gray;
   border-bottom: solid 1px gray;
 }
-.dropdown-menu{
-background-color:#cecfd0;
+
+.dropdown-menu {
+  background-color: #f7f9fa;
+}
+
+.navbar-brand {
+  font-weight: bolder;
+  font-style: italic;
+  text-shadow: 1px 1px red;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
 }

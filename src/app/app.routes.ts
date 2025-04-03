@@ -10,6 +10,7 @@ import {MiscellaneousComponent} from './features/miscellaneous/miscellaneous.com
 import {ContactComponent} from './features/contact/contact.component';
 import {CartComponent} from './features/cart/cart.component';
 import {ProductsComponent} from './features/products/products.component';
+import {LoginComponent} from './features/auth/login/login.component';
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -23,6 +24,7 @@ export const routes: Routes = [
   {path: 'miscellaneous', component: MiscellaneousComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'cart', component: CartComponent},
-  {path:'products',component:ProductsComponent}
+  {path: 'products', component: ProductsComponent},
+  {path: 'login', component: LoginComponent},
 ];
 

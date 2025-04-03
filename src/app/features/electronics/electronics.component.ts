@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {CurrencyPipe, NgForOf, NgIf} from '@angular/common';
+import {CurrencyPipe, JsonPipe, NgForOf, NgIf} from '@angular/common';
 import {LoaderComponent} from '../../shared/loader/loader.component';
 import {CardComponent} from '../../shared/card/card.component';
 import {RouterLink} from '@angular/router';
@@ -14,7 +14,8 @@ import {ProductService} from '../../core/services/product.service';
     NgForOf,
     NgIf,
     CardComponent,
-    RouterLink
+    RouterLink,
+    JsonPipe
   ],
   templateUrl: './electronics.component.html',
   styleUrl: './electronics.component.scss'
@@ -25,7 +26,9 @@ export class ElectronicsComponent implements OnInit {
   constructor(private productService: ProductService) {
   }
 
+
   ngOnInit(): void {
+
     this.productService.getProductsByCategory('electronics').subscribe(
       (data) => {
         this.electronics = data;

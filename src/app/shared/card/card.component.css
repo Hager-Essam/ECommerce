@@ -33,7 +33,7 @@ h4 {
   }
 }
 .card {
-  animation: float 3s infinite ease-in;
+  animation: float 3s infinite ease-in-out;
 }
 
 .card:hover {

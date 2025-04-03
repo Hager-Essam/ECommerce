@@ -1,0 +1,49 @@
+.container {
+  margin-top: 3rem;
+  line-height: 2;
+  background: rgb(224, 224, 224);
+  padding: 0 1rem 2.5rem 1rem;
+  border: 1px solid black;
+  height: 100%;
+  width: 20rem;
+  border-radius: .5rem;
+
+}
+
+.btn {
+  margin: .5rem 0 0 0;
+  width: 100%;
+  border-radius: 2rem;
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+input::placeholder {
+  font-size: 12px;
+}
+
+span:last-child {
+  text-align: center;
+  font-size: 13px;
+}
+
+input {
+  border-radius: 2rem;
+  padding: .5rem;
+  margin: 2rem 0 0 0;
+}
+.btn:hover{
+  background-color: rgb(224, 224, 224);
+  //color: white;
+  font-weight: bold;
+}
+.login-title {
+  border: 10px white solid;
+  border-radius: 0 0 10px 10px;
+  background-color: white;
+  width: 5rem;
+  height: 3rem;
+  margin: auto;
+}
+
