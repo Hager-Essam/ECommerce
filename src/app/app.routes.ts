@@ -1,30 +1,58 @@
 import {Routes} from '@angular/router';
-import {HomeComponent} from './layout/home/home.component';
-import {ElectronicsComponent} from './features/electronics/electronics.component';
-import {ClothesComponent} from './features/clothes/clothes.component';
-import {FurnitureComponent} from './features/furniture/furniture.component';
-// import {AccessoriesComponent} from './features/accessories/accessories.component';
-import {ShoesComponent} from './features/shoes/shoes.component';
-import {ProductDetails} from './shared/Product-Details/product-Details';
-import {MiscellaneousComponent} from './features/miscellaneous/miscellaneous.component';
-import {ContactComponent} from './features/contact/contact.component';
-import {CartComponent} from './features/cart/cart.component';
-import {ProductsComponent} from './features/products/products.component';
-import {LoginComponent} from './features/auth/login/login.component';
 
 export const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'electronics', component: ElectronicsComponent},
-  {path: 'clothes', component: ClothesComponent},
-  {path: 'furniture', component: FurnitureComponent},
-  // {path:'accessories',component:AccessoriesComponent},
-  {path: 'shoes', component: ShoesComponent},
-  {path: 'product/:id', component: ProductDetails},
-  {path: 'miscellaneous', component: MiscellaneousComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'cart', component: CartComponent},
-  {path: 'products', component: ProductsComponent},
-  {path: 'login', component: LoginComponent},
+  {
+    path: '',
+    loadComponent: () => import('./layout/home/home.component').then(m => m.HomeComponent)
+  },
+  {
+    path: 'home',
+    loadComponent: () => import('./layout/home/home.component').then(m => m.HomeComponent)
+  },
+  {
+    path: 'electronics',
+    loadComponent: () => import('./features/electronics/electronics.component').then(m => m.ElectronicsComponent)
+  },
+  {
+    path: 'clothes',
+    loadComponent: () => import('./features/clothes/clothes.component').then(m => m.ClothesComponent)
+  },
+  {
+    path: 'furniture',
+    loadComponent: () => import('./features/furniture/furniture.component').then(m => m.FurnitureComponent)
+  },
+  {
+    path: 'shoes',
+    loadComponent: () => import('./features/shoes/shoes.component').then(m => m.ShoesComponent)
+  },
+  {
+    path: 'product/:id',
+    loadComponent: () => import( './shared/Product-Details/product-Details').then(m => m.ProductDetails)
+  },
+  {
+    path: 'miscellaneous',
+    loadComponent: () => import( './features/miscellaneous/miscellaneous.component').then(m => m.MiscellaneousComponent)
+  },
+  {
+    path: 'contact',
+    loadComponent: () => import( './features/contact/contact.component').then(m => m.ContactComponent)
+  },
+  {
+    path: 'cart',
+    loadComponent: () => import( './features/cart/cart.component').then(m => m.CartComponent)
+  },
+  {
+    path: 'cart',
+    loadComponent: () => import( './features/cart/cart.component').then(m => m.CartComponent)
+  },
+  {
+    path: 'products',
+    loadComponent: () => import( './features/products/products.component').then(m => m.ProductsComponent)
+  },
+  {
+    path: 'login',
+    loadComponent: () => import( './features/auth/login/login.component').then(m => m.LoginComponent)
+  },
+
 ];
 
